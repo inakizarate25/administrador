@@ -17,7 +17,7 @@ function App() {
     })
 
   return (
-    <div>
+    <div className='bg-gray-900 h-full min-h-screen'>
         {usuario ? <Home correoUsuario={usuario.email}/> : <Login/>}
     </div>
   )

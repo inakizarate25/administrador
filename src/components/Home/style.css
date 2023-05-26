@@ -1,10 +1,4 @@
-.img-card{
-    height: 100px;
+.name {
+    max-width:250px;
 }
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
