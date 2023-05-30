@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-import Products from './components/Products/Products'
-import Login from './components/Login/Login'
 import Home from './components/Home/Home'
-import { appFirestore } from './credenciales'
+import Login from './components/Login/Login'
+import { app } from './credenciales'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-const auth = getAuth(appFirestore)
+const auth = getAuth(app)
 
 function App() {
     const [usuario, setUsuario] = useState(null)
@@ -19,7 +18,7 @@ function App() {
 
   return (
     <div className='h-full min-h-screen'>
-        {usuario ? <Products correoUsuario={usuario.email}/> : <Login/>}
+        {usuario ? <Home correoUsuario={usuario.email}/> : <Login/>}
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { appFirestore } from '../../credenciales'
+import { app } from '../../credenciales'
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
 import './style.css'
 
 
-const auth = getAuth(appFirestore)
+const auth = getAuth(app)
 
 function Login () {
     const [registro, setRegistro] = useState(false)
